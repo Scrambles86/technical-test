@@ -42,5 +42,13 @@ export class AccordionComponent {
 
   constructor() { }
 
-
+  accordionToggle(item: AccordionData):void {
+    const element = document.getElementById(`accordion__sub-item-${item.id}`);
+    item.display = !item.display;
+    if (element) {
+    element.classList.contains('hide')
+      ? element.classList.remove('hide')
+      : element.classList.add('hide');
+    }
+  }
 }
