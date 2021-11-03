@@ -1,9 +1,8 @@
 <div class="accordion">
-  <div>
-    <h3></h3>
-    <div>
-      <p></p>
+  <div class="accordion__item" *ngFor='let item of data'>
+    <h3 class="accordion__title" (click)="accordionToggle(item)">{{ item.title }} <i class="icon" [ngClass]="item.display ? 'fas fa-arrow-up': 'fas fa-arrow-down'"></i></h3>
+    <div class="accordion__content hide" id="accordion__sub-item-{{ item.id }}">
+      <p>{{ item.content }}</p>
     </div>
-
   </div>
 </div>
