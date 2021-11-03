@@ -1,27 +1,23 @@
-# TechnicalTest
+# Technical Test ReadMe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+In this technical test I have attempted to use some more of the complex skills that I learned in my time as a Junior Angular Developer, whilst still maintaining readability and reusability.
 
-## Development server
+## Model
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The creation of the model was a vital step in reusability. Whilst the data used in this test is currently static data, any data that is passed in will also become readable within the accordion providing that it matches the syntax set in the model. The model includes an ID for each set of data, which allows for individual data targeting within the component HTML file.
 
-## Code scaffolding
+The model also contains randomly generated Lorem Ipsum. The amount of Lorem Ipsum varies for each dataset, in order to show that the accordion title should remain at the top of the screen. This allows the user to click and close the accordion even if they are far down into the text.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## HTML
 
-## Build
+The HTML file initiates a for loop, which allows unique data sets from the model to be differentiated based on it's ID number. From here, a header is set for each accordion's title and content using data binding. The accordion content is initially set to hidden by default.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+For the arrow, I have imported Favicons into the index.html file. I then used a tertiary operator to target the boolean value of each dataset. This checks to see if the data is hidden, and if so, the data is shown - and vice versa. I was asked to make use of tertiary operators in my last role, as my team leader felt they delivered much cleaner code, and I am inclined to agree.
 
-## Running unit tests
+## CSS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I kept the CSS intentionally simple. The pictures provided showed a white background with blue text, so I kept to this minimalistic design. I did add grey to the background of each title on hover, as I felt it was slightly better UX, and the grey meant that the text of each title was still readable.
 
-## Running end-to-end tests
+## TS
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The TS file contains an import of the accordion data model, and then static data for each part of the accordion. Below the constructor is a simple function that works with the tertiary operator. It simply targets the element by it's ID, checks to see if that element contains 'hide' (which it does by default in the HTML tags), and alters the dataset based on what it is being told.
