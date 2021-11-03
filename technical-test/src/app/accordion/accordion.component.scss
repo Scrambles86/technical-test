@@ -23,3 +23,12 @@
 .accordion__title:hover {
   background: #acadad;
 }
+
+.hide {
+  height: 0;
+  overflow-y: hidden;
+}
+
+.accordion__content {
+  overflow-y: hidden;
+}
