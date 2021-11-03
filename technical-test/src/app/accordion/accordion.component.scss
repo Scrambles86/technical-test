@@ -4,3 +4,18 @@
   width: 90%;
   background: #ffffff
 }
+
+.accordion__title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  color: #348feb;
+  cursor: pointer;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  position: sticky;
+  z-index: 999999;
+}
